@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">클릭 한번 해볼까요?</h1>
+
+    <button onclick="mkH1()">h1태그 생성</button> 
+    <button onclick="mkA()">a태그 생성</button>
+    <button onclick="mkUl()">ul태그 생성</button>
+    
+
+    <div id="div1"></div><br><br><br>
+
+    <p id='p'>0</p>
+
+    <button onclick="plus()">+1 증가</button>
+    <button onclick="minus()">-1 감소</button>
+
+    <script>
+        
+        let div1 = document.getElementById('div1')
+        let p = document.getElementById('p')
+        let sum=parseInt(p.innerText)
+
+        function mkH1(){
+            
+           div1.innerHTML += "<h1>DOM 활용하기</h1>"
+        }
+
+        function mkA(){
+            div1.innerHTML += '<a id="a" href="www.google.com">Google로 가보자!</a><br>'
+            
+
+        }
+
+        function mkUl(){
+            
+            div1.innerHTML += '<ul><li>HTML</li>'+
+                              '<li>CSS</li>' + 
+                              '<li>Javascript</li></ul>'
+            
+
+        }
+
+        function plus(){
+          
+            p.innerText = (sum+=1)
+
+        }
+
+        function minus(){
+          
+            p.innerText = (sum-=1)
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

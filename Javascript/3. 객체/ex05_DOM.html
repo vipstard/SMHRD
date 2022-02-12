@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "p1"><b>Hello</b>, JS!</p>
+
+    <span>가</span>
+    <span class="c1">나</span>
+    <span>다</span>
+
+    <br>
+
+    <h1></h1>
+    <h1 class="c1"></h1>
+
+    <br>
+
+   
+    <input type="checkbox" name="subject" value="자바">자바
+    <input type="checkbox" name="subject" value="안드">안드로이드
+    <input type="checkbox" name="subject" value="웹">웹
+
+    <div id="tt"></div>
+
+    <button onclick="getId()">ID가 p1인 태그 접근</button>
+    <button onclick="getSpan()">Span태그 접근</button>
+    <button onclick="getClass()">class가 c1인 태그 접근</button>
+    <button onclick="getName()">name이 subject인 태그 접근</button>
+
+    <script>
+        function getId(){
+            let p1 = document.getElementById('p1');
+            console.log(p1.innerHTML) //태그사이에 있는 모든 HTML 요소
+            console.log(p1.innerText) //태그사이에 있는 텍스트 요소
+            
+            p1.innerHTML = '<i>값</i>수정' // 태그 작성시 태그 역할 수행
+            p1.innerText = '<i>값</i>수정' // 모든 값은 문자열
+        }
+
+        var getSpan = function(){
+            let sp = document.getElementsByTagName('span')
+           
+            for(var i=0; i<sp.length; i++){
+                console.log(sp[i].innerText)
+            }
+        }
+
+        var getClass = () => {
+            let c1 = document.getElementsByClassName('c1')
+            
+            for(var i=0; i<c1.length; i++){
+                console.log(c1[i].innerText = '클래스가 c1인 태그')
+            }
+        }
+
+        function getName(){
+            let sub = document.getElementsByName('subject')
+            let tt = document.getElementById('tt')
+            for(var i=0; i<sub.length; i++){
+                sub[i].checked = true //check박스 체크상태 설정
+                tt.innerText += sub[i].value //input태그의 실제 값
+            }
+        }
+    </script>
+    
+</body>
+</html>

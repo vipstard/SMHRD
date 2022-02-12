@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">자바스크립트 무작정 따라하기!!!!!!!!!!!!</a>
+    <br><br>
+    <button id="btn1">디자인바꾸기 짠!</button>&nbsp&nbsp<button id="btn2">되돌리기 짠!</button>
+    <br>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <h1>오늘은 1/26</h1>
+
+    <p>즐거운 JavaScript 수업입니닷!</p>
+
+    <script>
+        //document : 현재 html문서(body안)
+        //querySelector : 선택자 작성
+        //addEventListener : 선택한 영역에 이벤트 발생할때까지 기다리다가 발생하면은 실행
+        //function(){} : 함수 
+        document.querySelector("#btn1").addEventListener("click", function(){  
+
+            document.querySelector("body").style.backgroundColor = "black"
+            document.querySelector("body").style.color="white"
+        })
+
+        document.querySelector("#btn2").addEventListener("click", function(){  
+
+            document.querySelector("body").style.backgroundColor = "white"
+            document.querySelector("body").style.color="black"
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

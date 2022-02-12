@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 여기서부터 데이터를 넘겨줄 공간 form
+    필수 속성
+    -action : 전달위치
+    -method : 전달방식 -->
+
+    <form action="#" method="get">
+        <!-- input 속성  
+            (1) name : 입력한 값을 구분하기 위해 이름을 지정 
+            (2) placeholder : 미리 보기ㅌ 텍스트
+            (3) autofocus : 자동 커서 설정 
+            (4) value : 기본값 설정 
+            (5) readonly : 읽기모드
+            (6) maxlength : 글자 수 제한 지정 
+
+        -->
+        
+        <p>일반 텍스트를 작성하는 공간</p>
+
+        <span>ID : </span>
+        <input type="text" name="id" placeholder="ID를 입력해주세요." autofocus>
+        <br>
+
+        <span>PW : </span>
+        <input type="password" name="pw" placeholder="8자 이내로 입력해주세요."
+            maxlength="8">
+        <br>
+        <span>주소 : </span>
+        <input type="text" name="add" value="광주" readonly>
+
+        <br><br>
+        <p>체크</p>
+        <!-- checkbox, radio 를 사용할때는 name, value 필수!! -->
+       
+        <!-- checkbox : 다중선택  -->
+        <p>좋아하는 커피를 모두 골라주세요.</p>
+        아메리카노<input type="checkbox" name="coffee" value="ame">
+        카페라떼<input type="checkbox"name="coffee" value="lat">
+        <br>
+        <!-- radio : 단일선택 -->
+        <hr>
+        <p>성별을 골라주세요</p>
+        남자<input type="radio" name="gender" value="men">
+        여자<input type="radio" name="gender" value="women">
+
+
+        <!-- select : 선택 상자를 만드는 태그 -->
+        <select>
+            <option value="A">A형</option>
+            <option value="B">B형</option>
+            <option value="O">O형</option>
+            <option value="AB">AB형</option>
+
+        </select>
+        <br>
+
+        <input type="file">
+        <br>
+        <input type="color">
+        <br>
+        <input type="number">
+        <br>
+        <input type="range">
+        <br>
+        <input type="date"> 
+        
+        <!-- <input type="datetime"> : 현재 지원하지 않음 -->
+        
+        <input type="datetime-local">
+        <br>
+        <br>
+        <textarea name="" id="" cols="100" rows="5"></textarea>
+
+        <!-- 정보 처리 
+        범위 :  form(시작~끝)-->
+        
+        <br><br>
+        <input type="button" value="값 확인" onclick="call()">
+        <input type="submit">
+        <input type="reset">
+        
+    </form>
+
+    <!-- 자바스크립트영역 -->
+    <script>
+        function call(){
+           var file = document.querySelector('[type=color]').value
+            console.log(file);
+        }
+
+    </script>
+    
+</body>
+</html>

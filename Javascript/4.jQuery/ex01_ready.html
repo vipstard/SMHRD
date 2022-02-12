@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>p태그</p>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //페이지가 모두 로드된(DOM트리 생성) 후 직후에 p태그 사이에 글시를 바꾸기
+        $(function(){
+            $('p').text('dom이 완성되었습니다.')
+        })
+    </script>
+    
+</body>
+</html>

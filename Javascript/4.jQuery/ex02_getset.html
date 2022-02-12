@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>로그인 폼을 작성해봅시다</p>
+    <button id="btnP">p태그 다루기</button>
+    <div id="div1">
+        <h1 class="h">로그인폼</h1>
+        ID : <input type="text" name="id"><br>
+        PW : <input type="text" name="pw">
+    </div>
+    <p class="h"></p>
+    <button id="btnDiv">div태그 다루기</button>
+    <button id="btnH">h태그 다루기</button>
+    <button id="addAttr">id input 속성 추가</button>
+    <button id="getId_Pw">input태그 다루기</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $('#btnP').click(function(){
+            let p = $('p').html() //태그사이 값(태그 포함) 가지고 올 때
+            alert(p)
+            $('p').html('<i>p태그</i> 바꾸기!')
+            //태그사이 값 (태그포함) 수정하고 싶을 떄
+
+        })
+
+        $('#btnDiv').click(function(){
+            $('#div1').css('background-color', 'green')
+        
+
+        })
+
+        $('#btnH').click(function(){
+            $('.h').html('바꾸기')
+        })
+
+        $('#addAttr').click(function(){
+            $('input[name=id]').attr('placeholder', 'ID작성')
+            $('input[name=pw]').attr('placeholder', 'PW작성')
+        })
+
+        $('#getId_Pw').click(function(){
+            let id = $('input[name=id]').val()
+            let pw = $('input[name=pw]').val()
+            alert('아이디 : ' + id + ' 비밀번호 : ' + pw)
+        })
+
+   
+    </script>
+</body>
+</html>

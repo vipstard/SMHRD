@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let arr2=[23,54,78, 13, 44]
+       let M =arr2[0]
+
+       for(let i=1; i<arr2.length; i++){
+           if(M<arr2[i]) M=arr2[i]
+       }
+
+       console.log(arr2)
+       alert("최대값 >> " +  M)
+
+       let max2=Math.max.apply( null, arr2)
+       alert("최대값 >> " + max2)
+
+    
+
+    </script>
+    
+</body>
+</html>

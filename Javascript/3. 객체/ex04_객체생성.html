@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="go1">person1 go</button>
+    <script>
+        let person1 = {
+            name : "강예진",
+            age : 25,
+            go : function(){
+                alert("출근!")
+            }
+        }
+
+        person1.phone = '010-1234-1234'
+
+        console.log("person1 이름 : " , person1.name)
+        console.log("person1 나이 : " , person1.age)
+        console.log("person1 번호 : " , person1.phone)
+
+        document.querySelector('#go1').addEventListener('click', function(){
+            person1.go()
+        })
+
+    
+
+
+    </script>
+
+    
+</body>
+</html>

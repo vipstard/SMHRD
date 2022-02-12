@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.전체 선택자 (기호 : *) */
+        *{
+            color : green;
+        }
+
+        /*2. 태그 선택자(기호 : 태그이름) */
+        p{
+            color :red;
+        }
+
+        li{
+            font-size: 50px;
+        }
+
+        /* 3. 클래스 선택자(기호 : .) */
+        .dinner{
+            color : darkorange;
+        }
+
+        /* 4. 아이디 선택자(기호 : #) */
+        #salmon{
+            color:pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <p>웹페이지를 꾸며주는 스타일 시트 언어</p>
+    <ul>
+        <li>CSS 기본구조</li>
+        <li>CSS 선택자</li>
+        <li>CSS 스타일</li>
+    </ul>
+
+    <h1 class="dinner">오늘 저녁 추천!</h1>
+    <ol>
+        <li class="dinner" id="chicken">찜닭</li>
+        <li class="dinner" id="pork">쭈삼</li>
+        <!-- 클래스 여러개 지정할 때는 공백으로 구별 -->
+        <li class="dinner sushi" id="salmon">연어초밥</li>
+    </ol>
+
+    <script>
+        document.getElementById("salmon").onmouseup = function(){
+            alert("id가 salmon")
+
+        }
+    </script>
+</body>
+</html>

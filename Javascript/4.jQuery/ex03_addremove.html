@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            border: 3px red;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <div>
+        <img src="img/pg1.gif">
+    </div>
+    <button id="btn1">div내부 앞에 추가</button>
+    <button id="btn2">div내부 뒤에 추가</button>
+    <button id="btn3">div외부 앞에 추가</button>
+    <button id="btn4">div외부 뒤에 추가</button>
+    <button id="btn5">img 1개 삭제</button>
+    <button id="btn6">div 안 비우기</button>
+    <button id="btn7">class 추가</button>
+    <button id="btn8">class 삭제</button>
+    <button id="btn9">부모요소 접근</button>
+
+    <script>
+        $('img').click(function(){
+            alert("클릭")
+        })
+
+        $('#btn1').click(function(){ //div 내부 앞쪽에 이미지 추가
+            $('div').prepend('<img src=\"img/pg2.gif\">')
+
+        })
+        //.click : 최초에 페이지를 로딩할 때 선언되어있던 element에만
+        //이벤트를 추가(바인딩)하고 더이상 동적으로 바인딩 하지 않음
+        //on() : 동적으로 추가된 태그에 이벤트 추가 
+
+        $(document).on("click","#btn1", function(e){ 
+            $('div').prepend('<img src=\"img/pg2.gif\">')
+
+        })
+
+        $('#btn2').click(function(){ //div 내부 뒷쪽에 이미지 추가
+            $('div').append('<img src=\"img/pg2.gif\">')
+
+        })
+
+        $('#btn3').click(function(){ //div 외부 앞에 이미지 추가
+            $('div').before('<img src=\"img/pg3.gif\">')
+
+        })
+
+        $('#btn4').click(function(){ //div 외부 뒤에 이미지 추가
+            $('div').after('<img id=\'img1\' src=\"img/pg3.gif\">')
+
+        })
+
+        $('#btn5').click(function(){ //이미지 1개 삭제 (특정요소 삭제)
+            $('#img1').remove()
+
+        })
+
+        $('#btn6').click(function(){ //특정 요소 내부에 있는 요소 전부 삭제
+            $('div').empty()
+
+        })
+
+        $('#btn7').click(function(){ //특정 요소에 클래스 추가
+            $('img').addClass('c1')
+        })
+
+        $('#btn8').click(function(){ //특정 요소에 클래스 추가
+            $('img').removeClass('c1')
+        })
+
+        $('#btn8').click(function(){ //특정 요소에 클래스 추가
+            $('img').removeClass('c1')
+        })
+
+        $('#btn9').click(function(){
+            $('img').parent().css('background-color', 'pink')
+        })
+
+        
+
+
+
+       
+
+        
+    </script>
+</body>
+</html>

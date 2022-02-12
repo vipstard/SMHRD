@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="movie"></div>
+    <button onclick="getData()">영화 데이터 요청</button>
+
+    <script>
+        function getData(){
+            var xhr = new XMLHttpRequest() //request 객체 생성
+
+            if(!xhr){
+                alert("xhr 인스턴스가 생성되지 않았습니다!")
+
+                return false;
+            }
+
+            //요청방식, 요청서버경로
+            xhr.open('get', "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20220204" )
+            //요청
+            xhr.send()
+
+            //응답
+            xhr.onreadystatechange = function() {
+                //요청을 성공적으로 받았을때
+                if(xhr.readyState === XMLHttpRequest.DONE) {
+                    if(xhr.status===200) { //응답 데이ㅌ터 성공적으로 받았을 때
+                        var res  = JSON.parse(xhr.responseText)
+
+                        var str = `<table border='1'>`
+                        str += `<tr>`
+                        str += `<th>순위</th>`
+                        str += `<th>영화제목</th>`
+                        str += `<th>개봉일자</th>`
+                        str += `</tr>`
+
+                    for(let i=0; i<res.boxOfficeResult.weeklyBoxOfficeList.length; i++){
+                        var temp = res.boxOfficeResult.weeklyBoxOfficeList[i]
+                        str += `<tr>`
+                        str += `<td>${temp.rank}</td>`    
+                        str += `<td>${temp.movieNm}</td>`
+                        str += `<td>${temp.openDt}</td>`  
+                        str += `</tr>`
+                    }    
+                        str+=`</table>`
+
+                        var movie = document.getElementById('movie')
+                        movie.innerHTML = str
+                    
+                    }else { //응답데이터가 문제가 있을때
+                        alert("응답실패")
+                    }
+                }
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

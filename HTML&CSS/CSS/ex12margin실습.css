@@ -1,0 +1,31 @@
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        #Id1{
+            
+            background-color: paleturquoise;
+           
+        }
+
+        #Id2{
+            margin-left: 100px;
+            background-color: darkblue; 
+        }
+
+        #Id3{
+            margin-left: 200px;
+            background-color: red; 
+        }
+
+        #Id4{
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            margin-left: 300px;
+            background-color: violet; 
+        }
+
+       

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //오늘 날짜
+        var today = new Date() //객체생성
+        
+        var tyear = today.getFullYear() //날짜 객체가 가지고 있는 년도 속성
+        var tmonth = today.getMonth()+1 //월 (0~11)
+        var tdate = today.getDate() //일
+        var tday = today.getDay() //요일 (0~6 0(일) 5(금) 6(토))
+
+        if(tday===5){
+            tday="금"
+        }
+        console.log(tyear+"년"+tmonth+"월"+tdate+"일"+tday+"요일")
+
+        var hour = today.getHours() //시
+        var min = today.getMinutes() //분
+        var sec = today.getSeconds() //초
+
+        console.log(hour + "시" + min + "분" + sec+"초")
+    </script>
+    
+</body>
+</html>

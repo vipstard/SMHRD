@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var phone = "010-1234-1234"
+        var phone1 = "111-123123-1234"
+        
+
+        //정규표현식
+        var rPhone = /^01([0|1])-?([0-9]{3,4})-?([0-9]{4})$/
+
+        if(rPhone.test(phone) == true){
+            console.log("맞는 형식")
+        }
+
+        else{
+            console.log("틀린 형식")
+        }
+
+        //문자 리터럴(표현식) : 실행 시 문자열로 변경
+        var a = 20
+        var b = 5
+        var c = "자바"
+        var str = "저는 " + (a+b)+"살이고" + c+"를 좋아합니다."
+        console.log(str)
+
+        var str2 = `저는 ${a+b}살이고 ${c}를 좋아합니다.`
+        console.log(str2)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Java = Number(prompt("Java 점수를 입력하세요 "))
+        var Android = Number(prompt("Android 점수를 입력하세요 "))
+        var Web = Number(prompt("Web 점수를 입력하세요 "))
+
+        var sum=Java+Android+Web
+        var avg = (sum/3).toFixed(2)
+
+        if(avg>=90){
+           console.log("당신의 평균은 " + avg +"이고 A입니다.")
+        }else if(avg>=80){
+            console.log("당신의 평균은 " + avg +"이고 B입니다.")
+        }
+
+        else if(avg>=70){
+            console.log("당신의 평균은 " + avg +"이고 C입니다.")
+
+        }
+
+        else{
+            console.log("당신의 평균은 " + avg +"이고 F입니다.")
+
+        }
+    </script>
+    
+</body>
+</html>

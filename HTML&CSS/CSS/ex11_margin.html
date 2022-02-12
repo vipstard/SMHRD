@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+        }
+
+        #div1{
+            background-color: orangered;
+            /* margin: 20px; 모든 방향에 마진 적용 */
+            /* margin: 10px 100px 200px; 위 옆 아래 각각 지정 */
+            margin-left: 30px;
+            margin-bottom: 50px;
+
+        }
+        /*마진 상쇄 현상 : 마진이 겹쳐 있는 경우에는 더 큰 마진값을 가지도록 하는것*/
+        #div2{
+            background-color: paleturquoise;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">DIV1</div>
+    <div id="div2">DIV2</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+#layout{
+    width: 500px;
+    height: 500px;
+}
+
+#div1{
+    background-color: red;
+    height: 10%;
+    width: 100%;
+}
+
+#div2{
+    background-color: #FF5E00;
+    height: 10%;
+    width: 100%;
+}
+
+#div3{
+    background-color: #4285f4;
+    float: left;
+    width: 30%;
+    height: 60%;
+}
+
+#div4{
+    background-color: #34A853;
+    width: 100%;
+    height: 30%;
+  
+   
+}
+
+#div5{
+    background-color: #FBBC05;
+    width: 100%;
+    height: 30%;
+  
+
+}
+
+#div6{
+    background-color: gray;
+    height: 20%;
+}
+
+

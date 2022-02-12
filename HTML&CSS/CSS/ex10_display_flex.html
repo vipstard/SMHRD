@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div : display 기본 속성이 block(한줄에 하나씩만) */
+        #item1, #item2, #item3{
+            width: 200px;
+            height: 200px;
+          
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+        }
+
+        #item1{
+            background-color: limegreen;
+        }
+
+        #itme2{
+            background-color: orangered;
+        }
+
+        #item3{
+            background-color: magenta;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- display --flex (레이아웃 배치 전용 기능으로 고안) -->
+    <div id="container"> <!--flex container   -->
+        <div id="item1">ddd</div> <!--  flex item -->
+        <div id="item2">dddd</div>
+        <div id="item3">ddd</div>
+    </div>
+</body>
+</html>

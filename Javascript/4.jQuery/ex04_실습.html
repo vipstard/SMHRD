@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    
+
+    <button id='like'>좋아요</button><span> 0</span>
+    <br>
+    <input type="text"><button class='writeCom'>댓글작성</button>
+    <br>
+    <div id="com">
+        <p>첫댓글<button class='removeCom'>삭제</button></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).on('click','#like', function(){
+
+            var like = Number($('span').text())
+            $('span').text(like+1)
+
+            $(this).text('좋아요 취소')
+            $(this).removeAttr('id', 'like') //id 속성값중 like 삭제
+            $(this).attr('id', 'dislike') //id 속성값 추가
+            
+
+        })
+
+        $(document).on('click', '#dislike', function(){
+        var like = Number($('span').text())
+        $('span').text(like-1)
+
+        $(this).text('좋아요')
+        $(this).removeAttr('id', 'dislike') //id 속성값중 like 삭제
+        $(this).attr('id', 'like') //id 속성값 추가
+
+
+        })
+            
+
+        $('.writeCom').click(function(){
+            let com = $('input[type=text]').val()
+            $('#com').prepend("<p>"+com+"<button class='removeCom'>삭제</button></p>")
+            $('input[type=text]').val("")
+      
+
+        })
+
+        $(document).on('click', '.removeCom', function(){
+            $(this).parent().remove()
+
+        })
+          
+          
+        
+       
+
+
+
+    </script>
+    
+</body>
+</html>

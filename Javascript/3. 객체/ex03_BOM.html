@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="window.close()">닫기</button>
+    <a href="Ex03history.html">페이지 이동</a>
+    <script>
+        //window : 브라우저 창, alert, prompt, confirm 
+        //window.open("https://www.nate.com", "nate", "width=400, height=500, left=100, top=50")
+
+        //screen : 사용자의 모니터 정보
+        console.log(`화면너비 : ${screen.width}`)
+        console.log(`화면 높이 : ${screen.height}`)
+
+        //location : 주소창 정보
+        document.write("<br>현재 페이지 주소 : " + location.href +"<br>")
+        document.write("현재 페이지 주소 프로토콜 : " + location.protocol)
+
+        //navigator : 사용하는 브라우저/운영체제 정보
+        document.write("<br>브라우저 이름: " + navigator.appName)
+        document.write("<br>브라우저 사용 언어 : " + navigator.language)
+
+        //history : 
+
+    </script>
+</body>
+</html>

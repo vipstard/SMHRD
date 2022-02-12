@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* html 글씨 기본크기 16px */
+            font-size: 30px;
+        }
+        #sp1{
+            font-size: 20px;
+        }
+
+        /* px : 지정크기(고정) */
+        p{
+            font-size: 50px;
+        }
+        /* em : 부모 태그에 지정되어있는 글씨 크기 기준으로 배수로 설정
+        설정되어 있지 않으면 html 글씨 크기를 기준으로! */
+        #sp2{
+            font-size: 2em;
+        }
+
+        /* rem : html태그에 지정되어있는 글씨 크기 기준으로 배수로 설정 */
+        #sp3{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="sp1">px로 글씨크기 설정</span>
+    <p><span id="sp2">em으로 글씨크기 설정</span></p>
+    <span id="sp3">rem으로 글씨크기 설정</span>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. var : 재선언 가능, 재할당 가능
+        var aValue = 1
+        var aValue = 2
+        console.log(aValue)
+
+        aValue = 4
+        console.log(aValue)
+
+        //2. let : 재선언 불가능, 재할당 가능
+        let bValue = 1
+       // let bValue = 2  //재선언 불가능
+        console.log(bValue)
+        bValue = 4
+        console.log(bValue)
+
+        //3. const : 재선언 불가능, 재할당 불가능
+        const cValue = 1
+        //const cValue = 2 //재선언 불가능
+        console.log(cValue)
+
+        //cValue = 4 재할당 불가능
+        console.log(cValue)
+        
+        var a = prompt("이름을 입력하세요")
+
+        console.log("어서오세요\n"+ a +"님, 환영합니다.")
+    </script>
+    
+</body>
+</html>

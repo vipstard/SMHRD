@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th,td{
+            border: 1px limegreen solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num = prompt("과목 수를 입력해주세요")
+        let arr1=[]
+        let arr2=[]
+        let sum=0, avg=0
+
+
+       for(let i=0; i<num; i++){
+           arr1[i]=prompt("점수를 입력할 과목명을 입력해주세요 >> ")
+       }
+
+       for(let i=0; i<num; i++){
+           arr2[i]=Number(prompt(arr1[i]+"의 점수 입력"))
+           sum+=arr2[i]
+       }
+       avg=(sum/num).toFixed(2)
+
+       document.write("<table>")
+       document.write("<tr>")
+
+       for(let i=0; i<num; i++){
+        document.write("<th>")
+        document.write(arr1[i])
+        document.write("</th>")
+       }
+
+       document.write("<th>총합</th>")
+       document.write("<th>평균</th>")
+       document.write("</tr>")
+
+       document.write("<tr>")
+       for(let i=0; i<num; i++){
+        document.write("<td>")
+        document.write(arr2[i])
+        document.write("</td>")
+       }
+       document.write("<td>"+sum+"</td>")
+       document.write("<td>"+avg+"</td>")
+       document.write("</tr")
+       
+       document.write("</table>")
+    </script>
+
+    
+
+    
+</body>
+</html>

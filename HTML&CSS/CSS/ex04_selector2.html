@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 자식선택자 > */
+        ol>li{
+            font-size: 40px;
+        }
+        
+        /* 자손선택자 : 기호( ) */
+        ol li{
+            font-size: 40px;
+        }
+
+        /* 선택자가 겹칠경우에는 아래쪽에 작성된 것이 적용 */
+        /* 후행선택자 : 기호(~) */
+        #li1 ~ li{
+            color: aqua;
+        }
+        
+        /* 근접후행선택자 : 기호(+) */
+        #li1+li{
+            color: blueviolet;
+
+        }
+
+        /* nth-child() : 특정 순서에 있는 자식 선택자 */
+        /* ol 태그의 자식중에서 2번째 li태그를 선택 */
+        ol>li:nth-child(4){
+            font-style: italic;
+        }
+
+        /* 그룹선택자 (기호 : ,) */
+        span, h1, p{
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <strong>연수생 수칙</strong>
+        <ol>
+            <li id="li1">지각하지 않기</li>
+            <li>결석하지 않기</li>
+            <span>(불가피할 땐 꼭 담당연구원에게 미리 말하기)</span>
+            <li>복습하기</li>
+            
+             <ul>
+                 <li>온라인수업 잘 참여하기</li>
+                 <li>복습하기</li>
+                  <li>과제하기</li>
+             </ul>
+            
+        </ol>
+
+
+        <h1>캠퍼스 D수업</h1>
+        <p>녹화 꼭 해주세요!</p>
+        <ul>
+            <li>오전 : 선영표</li>
+            <li>오후 : 강예진</li>
+        </ul>
+</body>
+</html>
