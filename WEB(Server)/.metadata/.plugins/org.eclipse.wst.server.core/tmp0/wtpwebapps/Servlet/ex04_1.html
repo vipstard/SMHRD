@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <!-- 
+  	사용자가 서버프로그램으로 값을 보낼 수 있는 두가지 방법
+  	get : URL을 통해서 데이터를 전달 / 보안X / 보내는 데이터크기에 제한/ 빠름
+  		  URL(ISO-8859-1 -> euc-kr)
+  	
+  	
+  	post : 패킷을 통해서 데이터를 전달/ 보안강함 / 보내는 데이터크기에 제한X
+  	 --> 
+  	
+  	<h1>get방식</h1>
+ 	<form action="ex04_1" method="get">
+      <input type="text" name="text">
+      
+      <input type="submit" value="전송">
+      
+   </form>
+   
+   <h1>post방식</h1>
+   <form action="ex04_1" method="post">
+      <input type="text" name="text">
+      <input type="submit" value="전송">
+      
+   </form>
+   
+   <h1>선택태그</h1>
+   
+   <form action="ex04_1" method="post">
+      <h3>취미선택</h3> 
+      공부<input type="checkbox" name="hobby" value="공부">
+      운동<input type="checkbox" name="hobby" value="운동">
+      코딩<input type="checkbox" name="hobby" value="코딩">
+      
+      <h3>성별선택</h3>
+      남자<input type="radio" name="gender" value="남자">
+      여자<input type="radio" name="gender" value="여자">
+      <input type="submit" value="전송">
+      
+   </form>
+</body>
+</html>

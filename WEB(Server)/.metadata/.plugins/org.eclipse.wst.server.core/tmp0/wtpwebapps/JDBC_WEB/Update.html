@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 사용자에게 id/pw를 입력하면 해당id의 pw를 입력받은 pw로 변경하시오 -->
+	<h1>회원수정 페이지</h1>
+	<form action="UpdateCon" method="post">
+	
+	ID<input type="text" name="id">
+	
+	<select name="select" onchange="select_info()" id="select"> 
+		<option>pw</option>
+		<option>nick</option>
+		
+	</select>
+	
+	변경할 DATA<input type="text" name="data" id="data">
+	
+	<input type="submit" value="회원수정">
+</form>
+
+<script>
+	function select_info(){
+		
+		let select = document.getElementById("select")
+		let select_res = select.options[select.selectedIndex].value
+		let data = document.getElementById("data")
+		
+		if(select_res =="pw"){
+			
+			data.setAttribute("type", "password"); //타입을 패스워드로 변경해준다.
+			
+		}else if(select_res == "nick"){
+			data.setAttribute("type", "text"); 
+		}
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+package com.VO;
+
+public class memberVO {
+	
+	private String email;
+	private String pw;
+	private String tel;
+	private String address;
+	private String date;
+	
+	public memberVO(String tel, String address, String date) {
+		super();
+		this.tel = tel;
+		this.address = address;
+		this.date = date;
+	}
+	
+	
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!--  HTML에서 서버프로그램으로 값을 보내기 위한 3가지 필수 조건 -->
+	<form action="ex02">
+	
+	<!-- 1. action : 서버프로그램 주소 지정 -->
+		 <input type="text" name="num1">
+		 <select name="op">
+		 	<option>+</option>
+		 	<option>-</option>
+		 	<option>*</option>
+		 	<option>/</option>
+		 	
+		 </select>
+		 
+		 <input type="text" name="num2">
+		<!--  2. 입력한 태그에 name속성 설정(이름표) -->
+		
+		<input type="submit" value="계산하기">
+		
+	</form>
+</body>
+</html>
