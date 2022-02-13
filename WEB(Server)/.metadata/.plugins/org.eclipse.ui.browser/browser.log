@@ -979,3 +979,24 @@
 2월 12, 2022 24:17:40.102 [9516:2988:0212/001740.101:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
 2월 12, 2022 24:17:40.102 [9516:6240:0212/001740.102:ERROR:usb_descriptors.cc(114)] Failed to parse configuration descriptor.
 2월 12, 2022 24:17:40.105 [9516:6240:0212/001740.105:ERROR:device_event_log_impl.cc(214)] [00:17:40.105] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+2월 12, 2022 22:48:16.358 NEW SESSION
+2월 12, 2022 22:48:16.358 [2804:9544:0212/224816.357:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 22:48:16.359 [2804:9544:0212/224816.357:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 12, 2022 22:48:16.359 [2804:9544:0212/224816.357:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 22:48:16.359 [2804:9544:0212/224816.358:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 12, 2022 22:48:16.360 [2804:3752:0212/224816.360:ERROR:usb_descriptors.cc(114)] Failed to parse configuration descriptor.
+2월 12, 2022 22:48:16.362 [2804:3752:0212/224816.362:ERROR:device_event_log_impl.cc(214)] [22:48:16.362] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+2월 12, 2022 22:57:39.661 [1140:2112:0212/225739.661:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 22:57:39.662 [1140:2112:0212/225739.661:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 12, 2022 22:57:39.662 [1140:2112:0212/225739.661:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 22:57:39.662 [1140:2112:0212/225739.662:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 12, 2022 22:57:39.664 [1140:7648:0212/225739.664:ERROR:usb_descriptors.cc(114)] Failed to parse configuration descriptor.
+2월 12, 2022 22:57:39.669 [1140:7648:0212/225739.666:ERROR:device_event_log_impl.cc(214)] [22:57:39.666] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+2월 12, 2022 23:22:12.618 [7364:2644:0212/232212.618:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 23:22:12.619 [7364:2644:0212/232212.618:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 12, 2022 23:22:12.620 [7364:2644:0212/232212.618:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 12, 2022 23:22:12.621 [7364:2644:0212/232212.619:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 12, 2022 23:22:12.622 [7364:6932:0212/232212.622:ERROR:usb_descriptors.cc(114)] Failed to parse configuration descriptor.
+2월 12, 2022 23:22:12.625 [7364:6932:0212/232212.625:ERROR:device_event_log_impl.cc(214)] [23:22:12.626] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+2월 13, 2022 01:22:05.543 [7364:7912:0213/012205.542:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
