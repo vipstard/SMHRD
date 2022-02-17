@@ -14,7 +14,6 @@ INDEX VERSION 1.131+C:\Users\smhrd\Desktop\DATA\GIT\SMHRD\WEB(Server)\.metadata\
 2953211128.index
 379135565.index
 1550588035.index
-324733479.index
 2711036386.index
 4098837085.index
 3165995289.index
