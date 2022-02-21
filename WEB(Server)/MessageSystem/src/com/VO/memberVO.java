@@ -15,7 +15,7 @@ public class memberVO {
 		this.address = address;
 		
 	}
-
+	
 	public String getEmail() {
 		return email;
 	}

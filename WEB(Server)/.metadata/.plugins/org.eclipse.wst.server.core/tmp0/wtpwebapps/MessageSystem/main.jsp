@@ -34,7 +34,8 @@
 									if(vo==null){
 										out.print("<a href='#menu'>로그인</a>");
 									}else{
-										out.print("<a href='#menu'>로그아웃</a>");
+										out.print("<a href='update.jsp'>개인정보수정</a>");
+										out.print("<a href='LogoutCon'>로그아웃</a>");
 									}
 								%>
 							<!-- 로그인 후 Logout.jsp로 이동할 수 있는'로그아웃'링크와 '개인정보수정'링크를 출력하시오. -->

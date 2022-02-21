@@ -56,7 +56,8 @@
 		for(int i = al.size()-1;i >= 0;i--){
 	%>
 	<tr>
-		<td><a href="board_main.jsp?num=<%=al.get(i).getNum()%>"><%=al.get(i).getName() %></a></td>
+		<td><a href="board_main.jsp?num=<%=al.get(i).getNum()%>">
+			<%=al.get(i).getName() %></a></td>
 		<td><%=al.get(i).getWriter() %></td>
 		<td><%=al.get(i).getViews() %></td>
 	</tr>

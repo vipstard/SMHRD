@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.ReplyVO"%>
 <%@page import="com.model.BoardVO"%>
@@ -42,6 +43,9 @@ p {
 		
 		ArrayList<ReplyVO> al = dao.getReply(num);
 		System.out.println(al.size());
+		
+		MemberVO vo2 = (MemberVO)session.getAttribute("member");
+		
 	%>
 	<div class="card-body" style="margin-top: 100px; margin-bottom: 10px; height: 50px">
 		<p><%=vo.getName() %> / <%=vo.getWriter() %></p>
@@ -61,9 +65,8 @@ p {
 				</li>
 			</ul>
 			<ul class="list-group list-group-flush" id="reply">
-				<%
-					for(int i = al.size()-1;i >= 0;i--){
-				%>
+				
+				<%for(int i = al.size()-1;i >= 0;i--){%>
 				<li class="list-group-item"><span><%=al.get(i).getContent() %> / <%=al.get(i).getWriter() %></span></li>
 				<%} %>
 			</ul>
@@ -71,6 +74,8 @@ p {
 	</div>
 	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dac4065a7a1dada3f8ae562756260926&libraries=services"></script>
+	
+	
 	<script>
 		function addReply(){
 			let ta = document.querySelector("textarea"); //댓글 작성창
@@ -83,8 +88,10 @@ p {
             
             //요청방식 , 요청경로
             xhr.open('post', 'replyService')
+            
             //전송데이터의 형식
-            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+            
             //요청 & 전송할 데이터
             xhr.send(JSON.stringify(data))
             
@@ -95,6 +102,18 @@ p {
                      console.log(xhr.responseText) //응답데이터 확인 (responseXML)
                      if(xhr.responseText === "success"){
                         //location.href = "board_list.jsp"
+                        
+                        let li = document.creatElement('li')
+                        li.className = 'list-group-item' //li태그에 클래스 추가
+                        let span = document.createElement('span')
+                        span.innerText = ta.value + '/ <%=vo2.getId()%>'
+                        
+                        li.appendChild(span) //li태그 자식요소로 span 태그 추가
+                        
+                        replyDiv.insertBefore(li, replyDiv.firstChild ) //replyDiv 첫 번째 자식으로 추가
+                        
+                        ta.value=''
+                        
                      }else{
                         //check_p.innerText = '아이디/비밀번호를 확인해주세요'
                      }

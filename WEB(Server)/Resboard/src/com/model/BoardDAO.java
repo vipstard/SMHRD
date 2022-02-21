@@ -52,6 +52,9 @@ public class BoardDAO {
 		}
 		return al;
 	}// end of getList
+	
+	
+	
 	public BoardVO getOneList(int num) {
 		Connection conn = null;
 		PreparedStatement psmt = null;

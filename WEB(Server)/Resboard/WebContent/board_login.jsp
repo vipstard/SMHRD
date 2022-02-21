@@ -69,6 +69,7 @@ body {
 				
 				//전송데이터의 형식
 				xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+				
 				//요청 & 전송할 데이터
 				xhr.send(JSON.stringify(data));
 				
