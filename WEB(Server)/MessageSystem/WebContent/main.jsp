@@ -17,7 +17,7 @@
 	<body>
 	
 	<%
-		memberVO vo = (memberVO)session.getAttribute("loginvo");
+		memberVO vo = (memberVO)session.getAttribute("loginvo"); //¼¼¼Ç°¡Á®¿È
 	
 	
 	%>
