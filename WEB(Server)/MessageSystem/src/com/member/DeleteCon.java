@@ -15,32 +15,26 @@ import javax.servlet.http.HttpServletResponse;
 import com.DAO.memberDAO;
 
 
-@WebServlet("/JoinCon")
-public class JoinCon extends HttpServlet {
+@WebServlet("/DeleteCon")
+public class DeleteCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		//1. main.jsp에서 사용자가 보내주는 정보를 받으시오(POST)
-		
-		request.setCharacterEncoding("euc-kr");
-		
 		String email = request.getParameter("email");
-		String pw = request.getParameter("pw");
-		String phone = request.getParameter("phone");
-		String address = request.getParameter("address");
 		
-		memberDAO dao = new memberDAO();
-		
-		int cnt = dao.join(email, pw, phone, address);
+		memberDAO dao = new memberDAO(); // DAO 객체 선언
+		int cnt = dao.delete(email);	//DAO 객체의 회원삭제 함수 호출 (delete 함수)
 		
 		
 		if(cnt>0) {
-			//3. 저장 완료 후 main.jsp 이동하시오
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("selectMember.jsp");
+			
 		}else {
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("selectMember.jsp");
+			
 		}
+		
+		
 		
 	}
 

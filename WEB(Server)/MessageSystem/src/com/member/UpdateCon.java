@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.DAO.memberDAO;
 import com.VO.memberVO;
 
 
@@ -25,6 +26,7 @@ public class UpdateCon extends HttpServlet {
 		
 		
 		//pw, tel, address / email -> session 
+		
 		HttpSession session = request.getSession();
 		memberVO vo = (memberVO)session.getAttribute("loginvo");
 		
@@ -33,33 +35,11 @@ public class UpdateCon extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String tel = request.getParameter("tel");
 		String address = request.getParameter("address");
+	
+		// DAO객체 생성해서 DAO 에서 업데이트 받아오기 
+		memberDAO dao = new memberDAO();
 		
-		Connection conn = null;
-		PreparedStatement psmt = null;
-		
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//2. oracle에 가서 id/pw를 인증받아야함
-			
-			String url="jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			String dbid="hr";
-			String dbpw="hr";
-			
-			 conn = DriverManager.getConnection(url, dbid, dbpw);
-			
-		
-			
-
-		String sql = "update message_member set pw=?, tel=?, address=? where email=?";
-		
-		psmt = conn.prepareStatement(sql);
-		
-		psmt.setString(1, pw);
-		psmt.setString(2, tel);
-		psmt.setString(3, address);
-		psmt.setString(4, email);
-		
-		int cnt = psmt.executeUpdate();
+		int cnt=dao.update(email, pw, tel, address);
 		
 		if(cnt>0) {
 			//3. 저장 완료 후 main.jsp 이동하시오
@@ -77,26 +57,6 @@ public class UpdateCon extends HttpServlet {
 			System.out.println("수정실패");
 			response.sendRedirect("main.jsp");
 		}
-		
-	
-		} catch (Exception e) {
-	
-			e.printStackTrace();
-		}finally {
-			
-			try {
-				psmt.close();
-				conn.close();
-				
-			} catch (SQLException e) {
-				
-				e.printStackTrace();
-			}
-			
-			
-		}
-	
-		
 		
 	}
 
