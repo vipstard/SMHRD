@@ -21,7 +21,7 @@
 				<!-- Menu -->
 					<nav id="Update">	
 						<ul class="actions vertical">
-						<form action="UpdateCon" method="post">
+						<form action="UpdateCon.do" method="post">
 							<li><h5>회원정보수정</h5></li>
 							<%
 							memberVO vo = (memberVO)session.getAttribute("loginvo");

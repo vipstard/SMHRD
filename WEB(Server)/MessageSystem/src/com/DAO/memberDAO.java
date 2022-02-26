@@ -274,5 +274,40 @@ public class memberDAO {
 				
 		return cnt;
 	}
+
+	
+	
+	public boolean email_Check(String email) {
 		
+		boolean ck=false;
+		
+		try {
+			
+			conn();
+
+			//2. jdbc를 통해 member_message테이블에 있는 email의 정보를 검색하시오.
+			
+
+		String sql = "select * from message_member where email=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, email);
+	
+		rs = psmt.executeQuery();
+	
+		if(rs.next()) { //email 이 있는 경우 -> 사용 불가 email(true)
+			ck=true;
+
+		}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+
+		}
+	return ck;
+}
+	
+	
 }

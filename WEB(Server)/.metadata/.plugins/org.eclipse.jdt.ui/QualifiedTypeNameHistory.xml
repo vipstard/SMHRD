@@ -12,10 +12,21 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletContainerInitializer"/>
     <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="com.VO.memberVO"/>
     <fullyQualifiedTypeName name="com.DAO.memberDAO"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.POJO.LoginCon"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="com.POJO.JoinCon"/>
+    <fullyQualifiedTypeName name="javax.lang.model.element.ExecutableElement"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Executable"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.POJO.UpdateCon"/>
+    <fullyQualifiedTypeName name="sun.nio.cs.DelegatableDecoder"/>
+    <fullyQualifiedTypeName name="com.Command.Command"/>
+    <fullyQualifiedTypeName name="com.POJO.DeleteCon"/>
+    <fullyQualifiedTypeName name="com.POJO.LogoutCon"/>
 </qualifiedTypeNameHistroy>

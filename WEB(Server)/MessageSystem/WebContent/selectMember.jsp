@@ -53,7 +53,7 @@
 			<%=al.get(i).getEmail() %></a></td>
 		<td><%=al.get(i).getTel() %></td>
 		<td><%=al.get(i).getAddress() %></td>
-		<td><a href="DeleteCon?email=<%=al.get(i).getEmail() %>">삭제</a>
+		<td><a href="DeleteCon.do?email=<%=al.get(i).getEmail() %>">삭제</a>
 	</tr>
 	
 	<%

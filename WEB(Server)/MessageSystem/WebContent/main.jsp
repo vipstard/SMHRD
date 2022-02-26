@@ -39,7 +39,7 @@
 											out.print("<a href='selectMember.jsp'>전체회원 정보> </a>");
 										}
 										out.print("<a href='update.jsp'>개인정보수정</a>");
-										out.print("<a href='LogoutCon'>로그아웃</a>");
+										out.print("<a href='LogoutCon.do'>로그아웃</a>");
 									}
 								%>
 							<!-- 로그인 후 Logout.jsp로 이동할 수 있는'로그아웃'링크와 '개인정보수정'링크를 출력하시오. -->
@@ -50,7 +50,7 @@
 					<nav id="menu">	
 						<ul class="links">
 							<li><h5>로그인</h5></li>
-								<form action="LoginCon" method="post">
+								<form action="LoginCon.do" method="post">
 									<li><input type="text" name="email"  placeholder="Email을 입력하세요"></li>
 									<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
@@ -58,8 +58,10 @@
 						</ul>
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
-								<form action="JoinCon">
-									<li><input type="text" name="email"  placeholder="Email을 입력하세요"></li>
+								<form action="JoinCon.do">
+									<li><input id="email" type="text" name="email"  placeholder="Email을 입력하세요"></li>
+									<li><input type="button" value="중복체크" onclick="emailCheck()"></li>
+									<li><span id="checkEmail"></span></li>									
 									<li><input type="password" name="pw"  placeholder="PW를 입력하세요"></li>
 									<li><input type="text" name="phone"  placeholder="전화번호를 입력하세요"></li>
 									<li><input type="text" name="address"  placeholder="집주소를 입력하세요"></li>
@@ -180,7 +182,7 @@
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="text"  id="email" placeholder="보낼 사람 이메일"/>
+										<input type="text" placeholder="보낼 사람 이메일"/>
 									</div>
 
 									<div class="field">
@@ -274,6 +276,53 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+			function emailCheck(){ //중복체크 비 동기 통신 GET방식 이메일은 노출되도 되므로 GET방식으로 넘겨도 된다
+				
+				let email = document.querySelector('#email')  //댓글 작성창
+			      
+			      let xhr = new XMLHttpRequest()
+			      
+			      //요청방식 , 요청경로
+			      xhr.open('get', 'IdCheckCon.do?email='+email.value)
+			      
+			      //전송데이터의 형식
+			      xhr.setRequestHeader('Content-Type', 'x-www-form-urlencoded; charset=UTF-8')
+			      
+			      //요청 & 전송할 데이터
+			      xhr.send()
+			      
+			      xhr.onreadystatechange = function(){
+			         if(xhr.readyState===XMLHttpRequest.DONE){  //요청성공
+			            if(xhr.status===200){ //응답성공
+			               console.log("응답성공")
+			               console.log(xhr.responseText) //응답데이터 확인 (responseXML)
+			               //true ->사용 할 수 없는 아이디
+			             
+			               
+			               if(xhr.responseText=="true"){
+			            	   let c1 = document.getElementById('checkEmail')
+			            	   
+			            	   c1.innerText="사용할 수 없는 아이디 입니다."
+			               }else{
+ 								let c2 = document.getElementById('checkEmail')
+			            	   
+			            	   c2.innerText="사용할 수 있는 아이디 입니다."
+			               }
+			               //false -> 사용 할 수 있는 아이디
+			            	
+			            }else{
+			               console.log("응답실패")
+			            }
+			         }else{  //요청실패
+			            console.log("요청실패")
+			         }
+			      }
+				
+				
+			}
+			</script>
 
 	</body>
 </html>
