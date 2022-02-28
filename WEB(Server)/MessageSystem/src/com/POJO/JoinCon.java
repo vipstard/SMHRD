@@ -24,6 +24,15 @@ public class JoinCon implements Command{
 				
 				int cnt = dao.join(email, pw, phone, address);
 				
-			return "main.jsp";
+				String url = "";
+				
+			if(cnt>0) {
+				url = "joinSuccess.jsp";
+			}else {
+				url = "main.jsp";
+				
 			}
+			
+			return url;
+	}
 }

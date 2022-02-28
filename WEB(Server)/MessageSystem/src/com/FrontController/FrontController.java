@@ -1,6 +1,9 @@
 package com.FrontController;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +16,7 @@ import com.POJO.JoinCon;
 import com.POJO.LoginCon;
 import com.POJO.LogoutCon;
 import com.POJO.UpdateCon;
+import com.POJO.idCheckCon;
 
 //확장자패턴 사용 : 어떤 요청 이던 간에 뒤에 .do 가 붙어있으면 이 서블릿에서
 //받아서 처리
@@ -61,12 +65,28 @@ public class FrontController extends HttpServlet {
 		}
 		
 		else if(result.equals("IdCheckCon.do")) {
+			command = new idCheckCon();
 					
 		}
 		
+		
 		String url =  command.execute(request, response);
+		
+		if(url.equals("true") || url.equals("false")) { //id체크
+			PrintWriter out = response.getWriter();
+			out.print(url);
+			
+		}else if(url.equals("joinSuccess.jsp")) { //회원 가입 성공페이지 forward방식으로 값 전달하기
+			System.out.println(url);
+			RequestDispatcher dis = request.getRequestDispatcher(url);
+			dis.forward(request, response);
+			
+		}
+		
+		else {
 		response.sendRedirect(url);
-	}
+		}
 	
-
+		
+	}
 }

@@ -46,6 +46,10 @@ p {
 		
 		MemberVO vo2 = (MemberVO)session.getAttribute("member");
 		
+		//조회수 1증가
+		if(!vo.getWriter().equals(vo2.getId())){
+		dao.updateViews(num);
+		}
 	%>
 	<div class="card-body" style="margin-top: 100px; margin-bottom: 10px; height: 50px">
 		<p><%=vo.getName() %> / <%=vo.getWriter() %></p>
